@@ -1,4 +1,6 @@
 this is my try of git
 new line
+trying to enter through git
+
 
 
