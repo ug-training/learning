@@ -7,3 +7,4 @@ Basic linux commands
 6-copy commands
 7-mv commands
 
+8.copying the file from the crnt dir to another dir
