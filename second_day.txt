@@ -1,0 +1,10 @@
+second day git commands
+1.git add filename
+2.git commit
+3.git push
+4.git pull
+5.git status
+6.git clone url
+
+
+
