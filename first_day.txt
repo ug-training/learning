@@ -8,3 +8,5 @@ Basic linux commands
 7-mv commands
 8.copying the file from the crnt dir to another dir
 9-search files
+10-grep,find,locate for search
+11-grep is used to find the  text
