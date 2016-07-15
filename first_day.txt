@@ -1,0 +1,9 @@
+Basic linux commands
+1-pwd
+2-ls,ls -al
+3-chmod using name and number
+4-create file and directory mkdir
+5-removing dir along with files rm -r
+6-copy commands
+7-mv commands
+
