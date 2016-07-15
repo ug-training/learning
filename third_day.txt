@@ -1,0 +1,7 @@
+third day
+to login-  mysql -u root
+to create db - create database namme
+to select db-  use dbname
+to create table- create table tblename(columns datatype)
+to insert values- insert into tbname( col names) values (values for col)
+
