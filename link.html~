@@ -3,7 +3,7 @@
 <title>link example</title>
 </head>
 <body>
-<h1 style="background-color:red;color:blue;font-family:courier;font-size:200%;text-align:center">the new line</h1> 
+<h1 style="background-color:red;color:blue;font-family:courier;font-size:200%;text-align:center"><marquee direction="right" behaviour="alternate">the new line</marquee></h1> 
 <a href="http://www.w3schools.com">
 <img src="pic_mountain.jpg" alt="html tutoraial" style="width:56px;height:56px;border:0;"></a>
 <p><abbr title="user interface">UI</abbr></p>
