@@ -1,0 +1,21 @@
+fourth day
+database mysql
+update a table                                - update set column name where conditio
+diffrent select statements                    - select from where
+                                              - select from where like
+to join two different tables                  - select column names from tables along withn identifier on condition
+to alter a table                              - alter table tbl.name drop colmname
+                                              - alter table tbbl.name add i int
+to change the specification of defined column - alter table tabl.nme modify c char(10)
+to change the definition of a defined column  - alter table tabl.nam change i j bigint
+to delete the data in table                   - delete * from table
+                                              - delete * from table condition
+to sort the selected column                   - select columns from table.name order by asc,desc
+to join different table ad add the columns    - select columns from table1 left/right join table2 on condition
+that are not present 
+usage of null values in table                 - select can be given with is null and is not null
+						not as = null and !=null this will give the result as empty set
+to select the matching columns in table       - select col.names from table.name where col.name regexp condition
+
+
+
