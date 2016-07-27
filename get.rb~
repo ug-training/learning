@@ -1,0 +1,9 @@
+puts "Enter a string"
+a= gets.chomp
+puts "my name is #{a} \n #{a.class}"
+puts "enter a number"
+b= gets.chomp.to_i
+puts "my age is #{b} \n #{b.class}"
+puts "enter a float"
+c=gets.chomp.to_f
+puts "my height is #{c} \n #{c.class}"
