@@ -1,0 +1,6 @@
+puts "hello world"
+puts "new to ruby"
+puts"learning basics"
+x=1
+y=x++
+puts "sum of lessons in ruby #{x+y}"
