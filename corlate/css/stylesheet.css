@@ -1,0 +1,79 @@
+.main-wrapper{
+	position: relative;
+	width:100%;
+	font-family:Open-sans;
+	font-size:15px;
+}
+/* social bar style starts */
+.social-bar {
+	background-color: #191919;
+	padding: 13px;
+}
+.social-bar .contact {
+	background-color: #191919;
+	font-size: 13px;
+	color: #fff;
+}
+.social-bar a {
+	padding: 5px;
+	background-color: rgb(64,64,64);
+}
+.social-bar a i {
+	color: rgb(255,255,255);
+}
+.social-bar .search {
+	left:50px;
+	background-color:rgb(25,25,25);
+}
+/* social bar style ends */
+
+/* contact bar style starts */
+
+.header{
+	background-color:rgb(21,21,21);
+	font-family:open-sans;
+	padding:15px;
+}
+.header img{
+	width: 100px;
+    height: 50px;
+	}
+.header .cont a{
+	font-family:open-sans;
+	color:rgb(255,255,255);
+	font-size:15px;
+	padding:15px;
+	display:inline-block;
+	}
+/*.header .cont a:hover{
+    color: rgb(255,255,255);
+	background-color: rgb(197,45,47);
+	display: block;
+	}
+	*/
+.header .cont .contactss{
+	background-color:rgb(195,45,47);
+	}	
+/*contact bar style ends */
+/*image arrangement  starts*/	
+.bckimg{
+	position:relative;
+	overflow:visible;
+	left:0px;
+	height:200%;
+	width:100%;	
+	margin:0px;
+	display:block;
+}
+.frntimg{
+	position:absolute;
+	top:330px;
+	left:970px;
+	width:385px;
+	height:600px;
+}
+.hero-banner {
+	width: 100%;
+	height: 400px;
+}
+/*image arrangement ends*/

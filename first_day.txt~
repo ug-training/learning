@@ -10,5 +10,5 @@ Basic linux commands
 9-search files
 10-grep,find,locate for search
 11-grep is used to find the  text
-12-'locate' is the fast way to find a file than 'find' as a back end process is running continously for new files
+12-locate is the fast ay to find a file as a back end process is running continously for new files
 
