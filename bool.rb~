@@ -1,0 +1,15 @@
+a=10
+b=20
+puts"Enter a numbers"
+num1=gets.chomp.to_i
+num2=gets.chomp.to_i
+if a == num1
+puts "the entered num is equal to 10"
+else
+puts "the entered value is not equal to 10"
+end
+if b == num2
+puts "the entered num is equal to 20"
+else
+puts "the entered num is not equal to 20"
+end
