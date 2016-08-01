@@ -1,0 +1,23 @@
+def add(a,b)
+if a<b
+c=a+b
+puts"sum of two numbers #{a} and #{b} is #{c}"
+elsif a>b
+c=a-b
+puts"diff between two num  #{a} and #{b} is #{c}"
+end
+end
+add(10,15)
+add(25,5)
+def revers(a)
+c=[]
+i=a.length-1
+while i>=0
+c.push(a[i])
+i=i-1
+end
+return c  
+end 
+s=revers([1,2,3,4,5,6])
+
+puts"the array with return #{s}"
