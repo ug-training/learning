@@ -1,0 +1,2 @@
+module StatPageHelper
+end
