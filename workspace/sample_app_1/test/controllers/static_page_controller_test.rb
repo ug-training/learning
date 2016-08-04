@@ -11,4 +11,5 @@ class StaticPageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+
 end
