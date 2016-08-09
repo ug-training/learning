@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
   root 'stat_page#home'
 
@@ -10,9 +9,9 @@ Rails.application.routes.draw do
   get '/about', to: 'stat_page#about'
 
   get  '/signup',  to: 'users#new'
+  post '/signup',  to: 'users#create'
 
   get 'static_page/home'
-
-  get 'static_page/help'
-
+  get'static_page/help'
+  resources :users
 end
