@@ -5,6 +5,7 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.account_activation.subject
   #
+  #the link comes from user.rb as with self for the user
   def account_activation(user)
     @user = user
     mail to: user.email, subject: "Account activation"
@@ -15,9 +16,9 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.password_reset.subject
   #
-  def password_reset
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  #the link comes from user.rb as with self for the user
+  def password_reset(user)
+    @user = user
+    mail to: user.email, subject: "Password reset"
   end
 end
