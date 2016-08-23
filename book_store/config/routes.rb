@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'basic_page#home'
+
+  get '/login', to: 'basic_page#login'
+
 end
