@@ -24,5 +24,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'users/show'
+    assert is_logged_in? # to log in the user after sign up and this method is with the test\test_helper.rb
   end  
 end

@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)   
     if @user.save
+      log_in @user  #new users will be logged in automatically
       flash[:success] = "Welcome to Book World!!!"    	
       redirect_to @user
     else
