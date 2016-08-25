@@ -1,0 +1,9 @@
+<li id="book-<%= book.id %>">
+  <span class="book-content"><%= book.id %></span>
+  <span class="book-content"><%= book.book_name %></span>
+  <span class="book-content"><%= book.author %></span>
+  <span class="book-content"><%= book.price %></span>
+  <span class="book-content">
+    Issued at:<%= time_ago_in_words(book.created_at) %> 
+  </span>
+</li>

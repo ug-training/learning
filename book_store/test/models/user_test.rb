@@ -84,4 +84,11 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?(:activation, '')
   end  
 
+  test "Books for user should be destroyed" do
+    @user.save
+    @user.books.create!(book_name: "Lorem ipsum", author: "king john", price: 55555)
+    assert_difference 'Book.count', -1 do
+    @user.destroy
+    end
+  end
 end
