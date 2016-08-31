@@ -21,7 +21,12 @@ class User < ApplicationRecord
     SecureRandom.urlsafe_base64
   end 
 
-  # Returns true if the given token matches the digest.
+   # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Book.where("user_id = ?", id)
+  end
+   # Returns true if the given token matches the digest.
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest")
     return false if digest.nil?

@@ -1,21 +1,19 @@
-<% provide(:title, @user.first_name) %>
+<% provide(:title, @user.email) %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= @user.first_name %>
-        <%= @user.last_name %>
-        <%= @user.email %>
-      </h1>
+      <ul>
+       <li><span> <%= @user.first_name %> <%= @user.last_name %></span></li>
+        <li><%= @user.email %></li>
+      </ul>
     </section>
   </aside>
-  <div class="col-md-8">
+  <div class="col-md-8 ">
     <% if @user.books.any? %>
-      <h3>books (<%= @user.books.count %>)</h3>
+       <h3>books (<%= @user.books.count %>)</h3>
       <ol class="books">
         <%= render @books %>
       </ol>
-      <%= will_paginate @books %>
     <% end %>
   </div>
 </div>

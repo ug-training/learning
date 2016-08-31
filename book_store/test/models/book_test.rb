@@ -4,7 +4,7 @@ class BookTest < ActiveSupport::TestCase
 
   def setup
     @user = users(:michael)
-    @book= @user.books.build(book_name: "Lorem ipsum", author:"king john", price:55555)
+    @book= @user.books.build(book_name: "Lorem ipsum", author:"king john", price:555)
   end
 
   test "should be valid" do
@@ -41,8 +41,8 @@ class BookTest < ActiveSupport::TestCase
     assert_not @book.valid?
   end
 
-  test "price should be at most 5" do
-    @book.price = "a" * 6
+  test "price should be at most 3" do
+    @book.price = "a" * 4
     assert_not @book.valid?
   end
   test "order should be most recent first" do

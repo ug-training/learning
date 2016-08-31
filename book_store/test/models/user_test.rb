@@ -80,13 +80,14 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+ 
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?(:activation, '')
   end  
 
   test "Books for user should be destroyed" do
     @user.save
-    @user.books.create!(book_name: "Lorem ipsum", author: "king john", price: 55555)
+    @user.books.create!(book_name: "Lorem ipsum", author: "king john", price: 555)
     assert_difference 'Book.count', -1 do
     @user.destroy
     end

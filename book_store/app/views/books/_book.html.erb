@@ -1,9 +1,26 @@
-<li id="book-<%= book.id %>">
-  <span class="book-content"><%= book.id %></span>
-  <span class="book-content"><%= book.book_name %></span>
-  <span class="book-content"><%= book.author %></span>
-  <span class="book-content"><%= book.price %></span>
-  <span class="book-content">
+<li id="<%= book.id %>">
+<table>
+<tr>
+<th>Book-id</th>
+<th>Book-name</th>
+<th>Book-author</th>
+<th>Price</th>
+<th>Issued date</th>
+</tr>
+<tr>
+  <td><%= book.id %></td>
+  <td><%= book.book_name %></td>
+  <td><%= book.author %></td>
+  <td><%= book.price %></td>
+  <td>
     Issued at:<%= time_ago_in_words(book.created_at) %> 
-  </span>
-</li>
+      <% if current_user?(book.user) %>
+      <%= link_to "delete", book, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+     <%= link_to "edit", edit_book_path(book) %>
+      <% end %>
+  </td>
+    </tr>
+  </table>
+  <br />
+  </li>

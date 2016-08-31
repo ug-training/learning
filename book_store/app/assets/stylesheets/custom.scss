@@ -125,3 +125,20 @@ input {
     font-size: 2em;
   }
 }
+/* books */
+  
+.books {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  }
+th, td {
+    padding: 15px;
+}
