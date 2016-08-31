@@ -1,14 +1,17 @@
 class BooksController < ApplicationController
- before_action :logged_in_user, only: [:create, :edit, :update, :destroy]
+ before_action :logged_in_user, only: [:index, :create, :edit, :update, :destroy]
  before_action :correct_user,   only: :destroy	
+  def index
+    @books = Book.all
+  end
 
   def create
   	@book = current_user.books.build(book_params)
     if @book.save
-      flash[:success] = "Book createdfor user!!!!"
+      flash[:success] = "Book created for user!!!!"
       redirect_to root_url
     else
-      @feed_items = []
+      @books = Book.all
       render 'basic_page/home'
     end
   end

@@ -132,7 +132,6 @@ input {
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
   }
   .user {
     margin-top: 5em;
@@ -141,4 +140,5 @@ input {
   }
 th, td {
     padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
 }

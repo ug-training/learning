@@ -12,7 +12,7 @@
     <% if @user.books.any? %>
        <h3>books (<%= @user.books.count %>)</h3>
       <ol class="books">
-        <%= render @books %>
+        <%= render 'books/index' %><br>
       </ol>
     <% end %>
   </div>

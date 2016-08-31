@@ -1,10 +1,12 @@
 class BasicPageController < ApplicationController
+  
   def home
   	if logged_in?
   	    @book = current_user.books.build
-        @feed_items = current_user.feed.paginate(page: params[:page])
+        @books = Book.all
     end
   end
+
 
   def login
   end

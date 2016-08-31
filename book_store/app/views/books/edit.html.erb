@@ -1,5 +1,8 @@
 <% provide(:title, "Edit books") %>
 <h1>updating the book</h1>
+<div class="col-md-4">
+</div>
+<div class="col-md-4">
 <%= form_for (@book) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
       <%= f.label :book_name %>
@@ -12,6 +15,5 @@
       <%= f.number_field :price, class: 'form-control' %>
         <%= f.submit "save changes", class: "btn btn-primary" %>
   </div>
-</div>
 <% end %>
 

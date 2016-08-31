@@ -1,16 +1,22 @@
 <% provide(:title, "Home") %>
 <% if logged_in? %>
   <div class="row">
+  <div class="col-md-4">
+  </div>
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
       <section class="book_form">
         <%= render 'shared/book_form' %>
-      </section>   
-    </aside>
-      <h3>Book list</h3>
-      <%= render 'shared/feed' %>
+      </section>  
+      </aside>
+  <div class="col-md-4">
+  </div>
+   <section>
+      <h3 class="books">Books list</h3>
+      <%= render 'books/index' %>
+      </section>
   </div>
 <% else %>
   <div class="center jumbotron">
