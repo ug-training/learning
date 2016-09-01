@@ -1,4 +1,5 @@
 class AccountActivationsController < ApplicationController
+  #user activation and authentication is chek and redirected to user as log-in after the user creation(sign-up)
   def edit
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])

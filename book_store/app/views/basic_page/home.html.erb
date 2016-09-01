@@ -1,4 +1,5 @@
 <% provide(:title, "Home") %>
+<!-- from application.html.erb -->
 <% if logged_in? %>
   <div class="row">
   <div class="col-md-4">
@@ -9,14 +10,14 @@
       </section>
       <section class="book_form">
         <%= render 'shared/book_form' %>
-      </section>  
-      </aside>
-  <div class="col-md-4">
-  </div>
-   <section>
+      </section> 
+    </aside>
+        <div class="col-md-4">
+        </div> 
+    <section>
       <h3 class="books">Books list</h3>
       <%= render 'books/index' %>
-      </section>
+    </section>
   </div>
 <% else %>
   <div class="center jumbotron">

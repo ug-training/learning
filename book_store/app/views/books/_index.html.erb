@@ -8,22 +8,31 @@
 <th>Issued date</th>
 <th>Actions</th>
 </tr>
-  <% @books.each do |book| %>
-   <tr>
-   <td><%= book.id %></td>
+<% @books.each do |book| %>
+<% if current_user?(book.user) %>
+<tr class="userbooks">
+  <td><%= book.id %></td>
   <td><%= book.book_name %></td>
   <td><%= book.author %></td>
   <td><%= book.price %></td>
   <td>
     Issued at:<%= time_ago_in_words(book.created_at) %> </td>
     <td>
-      <% if current_user?(book.user) %>
       <%= link_to "delete", book, method: :delete,
                                        data: { confirm: "You sure?" } %>
      <%= link_to "edit", edit_book_path(book) %>
-      <% end %>
   </td>
   </tr>
+  <%else%>
+  <tr>
+  <td><%= book.id %></td>
+  <td><%= book.book_name %></td>
+  <td><%= book.author %></td>
+  <td><%= book.price %></td>
+  <td>
+    Issued at:<%= time_ago_in_words(book.created_at) %> </td>
+  </tr>
+<% end %>
   <%end%>
-   </table>
+</table>
   </li>

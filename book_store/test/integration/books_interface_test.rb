@@ -32,7 +32,7 @@ class BooksInterfaceTest < ActionDispatch::IntegrationTest
     assert_match price, response.body
     # Delete post
     assert_select 'a', text: 'delete'
-    first_book = @user.books.paginate(page: 1).first
+    first_book = @user.books.first
     assert_difference 'Book.count', -1 do
       delete book_path(first_book)
     end
