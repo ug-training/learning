@@ -4,6 +4,9 @@
 
 body {
   padding-top: 50px;
+  background-image:url("https://static.pexels.com/photos/12064/pexels-photo-12064.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 1100px;  
 }
 
 section {
@@ -16,10 +19,34 @@ textarea {
 
 .center {
   text-align: center;
+  margin-top: 200px;
+  background-image:url("http://www.indiareads.com/images/book1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
 }
 
 .center h1 {
   margin-bottom: 10px;
+  font-size: 5em;
+  color:#0A0706;
+}
+.row{
+  margin-top:90px;
+  margin-bottom: 50px;
+  background-image:url("http://www.austins.co.uk/images-new/main-images/funeral-guide/registering-the-death.jpg");
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.row .col-md-offset-3{
+  margin-bottom: 10%;
+}
+
+.loginpage{
+  margin-top:90px;
+  margin-bottom: 50px;
+  background-image:url("https://dictionaryproject.files.wordpress.com/2010/08/skelkeyindoor.jpg");
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
 }
 /* typography */
 
@@ -28,27 +55,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top:90px;
   text-align: center;
+  font-size: 5em;
+  color:#276ea2;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 3em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #779;
+  color: #290E25;
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.5em;
   line-height: 1.7em;
+  color: #f9f507;
 }
 
 /* header */
+header{
+  width: 100%;
+}
 
 #logo {
   float: left;
@@ -94,6 +127,10 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
+}
+label{
+  color:#276ea2;
+  font-size: 1.5em;
 }
 
 input {

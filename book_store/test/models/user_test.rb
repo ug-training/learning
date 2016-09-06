@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   def setup
-    @user = User.new(first_name: "Example", last_name: "User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
+    @user = User.new(first_name: "Example", last_name: "User", email: "user@example.com", password: "password", password_confirmation: "password")
   end
 
   test "should be valid" do
@@ -34,14 +34,14 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "email should not be too long" do
+  test "email to give exact length for password in railsl should not be too long" do
     @user.email = "a" * 55 + "@example.com"
     assert_not @user.valid?
   end  
 
   test "email validation should accept valid addresses" do
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
-                         first.last@foo.jp alice+bob@baz.cn]
+    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar
+                         firstlast@foo.jp alice+bob@baz.cn]
     valid_addresses.each do |valid_address|
       @user.email = valid_address
       assert @user.valid?, "#{valid_address.inspect} should be valid"
@@ -49,7 +49,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation should reject invalid addresses" do
-    invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
+    invalid_addresses = %w[user@example,com user_at_foo.org user.name@example. user.last@foo.org user@for.bar.last
                            foo@bar_baz.com foo@bar+baz.com]
     invalid_addresses.each do |invalid_address|
       @user.email = invalid_address
@@ -72,15 +72,21 @@ class UserTest < ActiveSupport::TestCase
   end  
 
   test "password should be present (nonblank)" do
-    @user.password = @user.password_confirmation = " " * 6
+    @user.password = @user.password_confirmation = " " * 8
     assert_not @user.valid?
   end
 
   test "password should have a minimum length" do
-    @user.password = @user.password_confirmation = "a" * 5
+    @user.password = @user.password_confirmation = "a" * 7
     assert_not @user.valid?
   end
- 
+  test "to check the password format" do
+    @user.password = 'mA1k@u2f'
+    @user.save
+    @user.password_confirmation = 'mA1k@u2f'
+    @user.save
+  end
+
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?(:activation, '')
   end  
