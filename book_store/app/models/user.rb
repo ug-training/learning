@@ -6,7 +6,7 @@ class User < ApplicationRecord
   before_create :create_activation_digest	
 	validates :first_name,  presence: true, length: {maximum: 20}
 	validates :last_name,  presence: true, length: {maximum: 20}
-  VALID_EMAIL_REGEX = /\A[\w+\-]+@[a-z\d\-]+.[a-z]\z/i
+  VALID_EMAIL_REGEX = /\A[a-z\-]+@[a-z]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: 50}, format: {with: VALID_EMAIL_REGEX}, uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: {is: 8}, format: {with: /\A(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[[:^alnum:]])/x, message: "it should have one lowercase letter,one upper case letter, a symbol and one number"}

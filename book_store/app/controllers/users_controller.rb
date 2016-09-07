@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
 #cerate action is used to add further more users and saving it
   def create
-    @user = User.new(user_params)   
+    @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
