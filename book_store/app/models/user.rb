@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  #validation for the new user details
+   #validation for the new user details
   has_many :books, dependent: :destroy
   attr_accessor :activation_token
   before_save   :downcase_email

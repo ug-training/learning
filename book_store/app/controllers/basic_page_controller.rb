@@ -6,4 +6,10 @@ class BasicPageController < ApplicationController
         @books = Book.all
     end
   end
+
+  def about
+  end
+
+  def contact
+  end
 end

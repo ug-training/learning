@@ -11,7 +11,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_template 'users/show'
     assert_select 'title', "#{@user.email} - Book World"
     assert_select "ul" do
-    	assert_select "li", 4
+    	assert_select "li", 6
     end
     assert_match @user.books.count.to_s, response.body
     end

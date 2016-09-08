@@ -6,7 +6,7 @@ body {
   padding-top: 50px;
   background-image:url("https://static.pexels.com/photos/12064/pexels-photo-12064.jpeg");
   background-repeat: no-repeat;
-  background-size: 100% 1100px;  
+  background-size: 100% 100%;  
 }
 
 section {
@@ -61,6 +61,7 @@ h1 {
   text-align: center;
   font-size: 5em;
   color:#276ea2;
+  overflow:auto;
 }
 
 h2 {
@@ -70,6 +71,7 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: #290E25;
+  overflow:visible;
 }
 
 p {
@@ -93,6 +95,33 @@ header{
   padding-top: 9px;
   font-weight: bold;
 }
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid black;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
 
 /* sidebar */
 
